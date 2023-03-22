@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-export default function api() {
+const api = (() => {
   const BASE_URL = 'https://forum-api.dicoding.dev/v1';
 
   function putAccessToken(token) {
@@ -21,10 +21,7 @@ export default function api() {
   }
 
   async function register({ name, email, password }) {
-    console.log('email1', email);
-    console.log('name1', name);
-    console.log('password1', password);
-    const response = await fetch(`${BASE_URL}/users`, {
+    const response = await fetch(`${BASE_URL}/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -348,4 +345,6 @@ export default function api() {
     neutralizeVoteComment,
     getLeaderboards,
   };
-}
+})();
+
+export default api;

@@ -13,19 +13,6 @@ function RegisterInput({ register }) {
       <form onSubmit={() => register({ name, email, password })} className="bg-white shadow-md rounded py-10 px-16 mb-4">
         <h1 className="text-xl text-center font-bold mb-10">Create your account</h1>
         <div className="mb-4">
-          <label className="block text-stone-700 text-sm font-bold mb-2" htmlFor="email">
-            Email
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-stone-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="email"
-              type="email"
-              placeholder="Type your Email here..."
-              value={email}
-              onChange={onEmailChange}
-            />
-          </label>
-        </div>
-        <div className="mb-4">
           <label className="block text-stone-700 text-sm font-bold mb-2" htmlFor="name">
             Name
             <input
@@ -35,6 +22,19 @@ function RegisterInput({ register }) {
               placeholder="Type your Name here..."
               value={name}
               onChange={onNameChange}
+            />
+          </label>
+        </div>
+        <div className="mb-4">
+          <label className="block text-stone-700 text-sm font-bold mb-2" htmlFor="email">
+            Email
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-stone-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              placeholder="Type your Email here..."
+              value={email}
+              onChange={onEmailChange}
             />
           </label>
         </div>
@@ -54,7 +54,7 @@ function RegisterInput({ register }) {
         <p className="mb-4">
           Already have an account?
           {' '}
-          <Link to="/" className="underline hover:text-amber-500">Login</Link>
+          <Link to="/login" className="underline hover:text-amber-500">Login</Link>
         </p>
         <div className="flex items-center justify-center">
           <button
