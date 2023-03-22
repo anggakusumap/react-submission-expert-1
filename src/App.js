@@ -18,7 +18,11 @@ function App() {
 
   useEffect(() => {
     dispatch(asyncPreloadProcess());
-  }, [dispatch]);
+  }, []);
+
+  // const onSignOut = () => {
+  //   dispatch(asyncUnsetAuthUser());
+  // };
 
   if (isPreload) {
     return null;
@@ -39,9 +43,21 @@ function App() {
   }
 
   return (
-    <div className="App bg-slate-500">
-      <Navigation />
-    </div>
+    <>
+      <Loading />
+      <div className="app-container">
+        <header>
+          <Navigation authUser={authUser} />
+        </header>
+        <main>
+          nice
+          {/* <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/talks/:id" element={<DetailPage />} />
+          </Routes> */}
+        </main>
+      </div>
+    </>
   );
 }
 
