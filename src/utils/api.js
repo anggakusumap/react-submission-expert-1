@@ -21,6 +21,9 @@ export default function api() {
   }
 
   async function register({ name, email, password }) {
+    console.log('email1', email);
+    console.log('name1', name);
+    console.log('password1', password);
     const response = await fetch(`${BASE_URL}/users`, {
       method: 'POST',
       headers: {

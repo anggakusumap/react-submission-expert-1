@@ -14,10 +14,13 @@ function receiveUsersActionCreator(users) {
   };
 }
 
-function asyncRegisterUser({ email, name, password }) {
+function asyncRegisterUser({ name, email, password }) {
+  console.log('email', email);
+  console.log('name', name);
+  console.log('password', password);
   return async () => {
     try {
-      await api.register({ email, name, password });
+      await api.register({ name, email, password });
     } catch (error) {
       alert(error.message);
     }

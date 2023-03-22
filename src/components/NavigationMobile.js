@@ -40,8 +40,8 @@ export default function NavigationMobile(props) {
           </div>
           <div className="mt-auto">
             <div className="pt-6">
-              <Link className="block px-4 py-3 mb-3 text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl" to="/">Login</Link>
-              <Link className="block px-4 py-3 mb-2 text-xs text-center text-white font-semibold bg-amber-500 hover:bg-amber-600  rounded-xl" to="/">Register</Link>
+              <Link className="block px-4 py-3 mb-3 text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl" to="/login">Login</Link>
+              <Link className="block px-4 py-3 mb-2 text-xs text-center text-white font-semibold bg-amber-500 hover:bg-amber-600  rounded-xl" to="/register">Register</Link>
             </div>
           </div>
         </nav>

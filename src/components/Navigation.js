@@ -43,8 +43,8 @@ export default function Navigation() {
             <AiOutlineMore />
           </li>
         </ul>
-        <Link className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-amber-700 font-bold  rounded-xl transition scale-95 hover:scale-100 transform ease-in duration-200" to="/">Login</Link>
-        <Link className="hidden lg:inline-block py-2 px-6 bg-amber-500 hover:bg-amber-600 text-sm text-white font-bold rounded-xl transition scale-95 hover:scale-100 transform ease-in duration-200" href="/">Register</Link>
+        <Link className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-amber-700 font-bold  rounded-xl transition scale-95 hover:scale-100 transform ease-in duration-200" to="/login">Login</Link>
+        <Link className="hidden lg:inline-block py-2 px-6 bg-amber-500 hover:bg-amber-600 text-sm text-white font-bold rounded-xl transition scale-95 hover:scale-100 transform ease-in duration-200" to="/register">Register</Link>
       </nav>
       <NavigationMobile showMobile={isShowMobile} />
     </>
